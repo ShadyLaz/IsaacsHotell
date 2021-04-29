@@ -1,0 +1,26 @@
+﻿@model IsaacsHotell.Models.Bokning
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<h4>@ViewBag.Rumsinfo</h4>
+@ViewBag.Errormessage
+
+<div class="row">
+    <div class="col-md-4">
+
+        <form asp-action="ConfirmTheBooking">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" name="_BookFrom" class="" value="@ViewBag.bookfrom" onclick="ConfirmTheBooking()" />
+            <input type="hidden" name="_BookTo" class="" value="@ViewBag.bookto" onclick="ConfirmTheBooking()" />
+            <input type="hidden" name="_NoOfMembers" class="" value="@ViewBag.noofmembers" onclick="ConfirmTheBooking()" />
+            <input type="hidden" name="_nätter" class="" value="@ViewBag.antnätter" onclick="ConfirmTheBooking()" />
+            <input type="hidden" name="_kostnad" class="" value="@ViewBag.kostnad" onclick="ConfirmTheBooking()" />
+            <input type="hidden" name="_RoomId" class="" value="@ViewBag.Room" onclick="ConfirmTheBooking()" />
+
+            <input type="submit" value="Slå till!" class="Boka" />
+        </form>
+    </div>
+</div>
